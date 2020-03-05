@@ -1,0 +1,25 @@
+---
+- name: create a network
+  docker_network:
+    name: lamp
+    ipam_config:
+      - subnet: 172.15.1.0/24
+        gateway: 172.15.1.1
+       
+- name: start container
+  docker_container:
+    name: apache
+    image: jamalgardiner/sshd-centos
+    state: started
+    exposed_ports:
+      - 80
+    ports: "80:80"
+    tty: true
+    detach: true
+    command: /sbin/init
+    networks:
+      - name: lamp
+        ipv4_address: 172.15.1.2
+        aliases: apache
+
+   
