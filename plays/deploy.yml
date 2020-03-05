@@ -4,3 +4,8 @@
   roles:
     - deployapache
 
+- name: configure apache server 
+  hosts: apache
+  user: root
+  roles: 
+    - configapache
