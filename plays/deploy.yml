@@ -1,0 +1,6 @@
+---
+- name: Setup apache server
+  hosts: localhost
+  roles:
+    - deployapache
+

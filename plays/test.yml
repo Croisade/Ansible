@@ -1,6 +1,0 @@
----
-- name: Setup mysql server
-  hosts: localhost
-  roles:
-    - pull
-
