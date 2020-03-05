@@ -1,0 +1,6 @@
+---
+# tasks file for Pull
+- name: Pull an image
+  docker_image:
+    name: "{{ pulled_image }}"
+    source: pull
