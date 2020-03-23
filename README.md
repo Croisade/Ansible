@@ -1,1 +1,1 @@
-Found out that deployments using docker isn't practical. Will be learning kubernetes.
+Ansible playbook storage - more to come.
